@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-12-28T02:52:47.929Z</updated>
+  <updated>2019-03-01T02:59:50.377Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2018/12/20/%E5%BE%AA%E7%8E%AF%E9%97%AE%E9%A2%98/"/>
     <id>http://yoursite.com/2018/12/20/循环问题/</id>
     <published>2018-12-20T10:41:50.000Z</published>
-    <updated>2018-12-28T02:52:47.929Z</updated>
+    <updated>2019-03-01T02:59:50.377Z</updated>
     
     <content type="html"><![CDATA[<h1 id="有关循环的一些语法"><a href="#有关循环的一些语法" class="headerlink" title="有关循环的一些语法"></a>有关循环的一些语法</h1><hr><h2 id="1-foreach与map的异同点"><a href="#1-foreach与map的异同点" class="headerlink" title="1.foreach与map的异同点"></a>1.foreach与map的异同点</h2><p>  <strong>(1) map定义和用法：：</strong><br>  map方法返回一个新的数组，数组中的元素为原始数组调用函数处理后的值。<br>  我的理解就是：原数组进行处理之后对应的一个新的数组。<br>  map()方法按照原始数组元素顺序依次处理元素。<br>  注意：map()方法不会对空数组进行检测。<br>  map()方法不会改变原始数组。<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array.map(function(item,index,arr)&#123;&#125;,thisValue)</span><br></pre></td></tr></table></figure></p><p><strong> (2)foreach定义和用法 ：</strong><br>  forEach()方法用于调用数组的每个元素，将元素传给回调函数。<br>  注意：forEach对于空数组是不会调用回调函数的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Array.forEach(function(item,index,arr)&#123;&#125;,this)</span><br></pre></td></tr></table></figure></p>]]></content>
     
@@ -32,7 +32,9 @@
     </summary>
     
     
-      <category term="js es6" scheme="http://yoursite.com/tags/js-es6/"/>
+      <category term="js" scheme="http://yoursite.com/tags/js/"/>
+    
+      <category term="es6" scheme="http://yoursite.com/tags/es6/"/>
     
   </entry>
   
@@ -73,6 +75,26 @@
     
     
       <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>css属性问题</title>
+    <link href="http://yoursite.com/2018/01/09/css/"/>
+    <id>http://yoursite.com/2018/01/09/css/</id>
+    <published>2018-01-08T18:30:50.000Z</published>
+    <updated>2019-03-01T03:57:16.247Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="有关CSS3的一些属性"><a href="#有关CSS3的一些属性" class="headerlink" title="有关CSS3的一些属性"></a>有关CSS3的一些属性</h1><hr><h2 id="1-input输入默认值"><a href="#1-input输入默认值" class="headerlink" title="1.input输入默认值"></a>1.input输入默认值</h2><p>placeholder属性。在输入框为空的情况下会显示placeholder中的值。但是提交时不能直接取其值。<br>value属性。在输入框加载的时候输入框中的值。提交时可直接获取。<br>  <strong>(1) 使用onfocus事件：</strong><br>  如果是默认值,就将value属性置空.如:<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=&quot;text&quot; value=&quot;请输入内容&quot; onfocus=&quot;javascript:if(this.value==&apos;请输入内容&apos;)this.value=&apos;&apos;;&quot;&gt;</span><br></pre></td></tr></table></figure></p><p><strong> (2)placeholder=”这里输入文字” ：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input id=&quot;email&quot; type=&quot;text&quot; placeholder=&quot;这里输入文字&quot; size=&quot;22&quot; /&gt;</span><br></pre></td></tr></table></figure></p><h2 id="2-position-的属性"><a href="#2-position-的属性" class="headerlink" title="2.position 的属性"></a>2.position 的属性</h2><p>　position的含义是指定位类型，取值类型可以有：static、relative、absolute、fixed、inherit和sticky，这里sticky是CSS3新发布的一个属性。<br>(1)inherit继承父元素的position属性;<br>(2)position属性设置了sticky的元素，在屏幕范围（viewport）时该元素的位置并不受到定位影响（设置是top、left等属性无效），当该元素的位置将要移出偏移范围时，定位又会变成fixed，根据设置的left、top等属性成固定位置的效果。<br>如果你设置了top: 50px，那么在sticky元素到达距离相对定位的元素顶部50px的位置时固定，不再向上移动。</p><h2 id="3-box-sizing-属性"><a href="#3-box-sizing-属性" class="headerlink" title="3.box-sizing 属性"></a>3.box-sizing 属性</h2><p>box-sizing 属性可以被用来调整这些表现:<br>content-box:是默认值。如果设置一个元素的宽为100px，那么这个元素的内容区会有100px宽，并且任何边框和内边距的宽度都会被增加到最后绘制出来的元素宽度中。<br>border-box:告诉浏览器去理解你设置的边框和内边距的值是包含在width内的。也就是说，如果你将一个元素的width设为100px,那么这100px会包含其它的border和padding，内容区的实际宽度会是width减去border + padding的计算值。</p><h2 id="4-vertical-align-属性"><a href="#4-vertical-align-属性" class="headerlink" title="4.vertical-align 属性"></a>4.vertical-align 属性</h2><p>vertical-align 属性设置元素的垂直对齐方式。该属性定义行内元素的基线相对于该元素所在行的基线的垂直对齐。<br>属性示意图如下：<br><img src="vertical.png" alt="示例图片" title="示例图片"></p>]]></content>
+    
+    <summary type="html">
+    
+      css3中的强大属性
+    
+    </summary>
+    
+    
+      <category term="css3" scheme="http://yoursite.com/tags/css3/"/>
     
   </entry>
   
